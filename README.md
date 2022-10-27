@@ -15,4 +15,5 @@ Setup Instructions:
 11. you can access the application on any browser at "http://localhost:8000/" or "127.0.0.1:8000".
 12. You can use Postman to check test the functionality of the API.
 
-<img src="C:\Users\oscar\PhpstormProjects\CourseManagement\public\imagesproj\api documents.PNG"/>
+
+NB: Relevant images can be found at /"CourseManagement/public/imagesproj" folder within the project
