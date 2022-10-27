@@ -82,11 +82,12 @@ class DegreeProgramController extends Controller
      * @param  \App\Models\DegreeProgram  $degreeProgram
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DegreeProgram $degreeProgram)
+    public function update($id)
     {
-        //
-    }
+        $degreeprogram = DB::table('degree_programs')->where('id', $id)->first();
 
+        return view('degreeprogramviews/degreeprogramupdate', ['degreeprogram' => $degreeprogram]);
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -96,5 +97,20 @@ class DegreeProgramController extends Controller
     public function destroy(DegreeProgram $degreeProgram)
     {
         //
+    }
+    public function addnewprogrampost_update(Request $request,$id)
+    {
+        $degree_program_result = DegreeProgram::where('id', $id)->first();
+
+        $degree_program_result->degree_program_title= $request->input('degree_program_title');
+        $degree_program_result->degree_qualification= $request->input('degree_qualification');
+        $degree_program_result->ucas_code= $request->input('ucas_code');
+        $degree_program_result->degree_program_description= $request->input('degree_program_description');
+        $degree_program_result->keywords= $request->input('keywords');
+
+        $degree_program_result->save();
+
+
+        return redirect()->route('degreeprogramindex');
     }
 }

@@ -23,3 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('addnewprogram', [App\Http\Controllers\DegreeProgramController::class, 'create'])->name('addnewprogram');
 Route::post('addnewprogrampost', [\App\Http\Controllers\DegreeProgramController::class,'store'])->name('addnewprogrampost');
 Route::get('degreeprogramindex', [App\Http\Controllers\DegreeProgramController::class, 'index'])->name('degreeprogramindex');
+Route::get('/updatedegreeprogram/{id}',[\App\Http\Controllers\DegreeProgramController::class, 'update'])->name('updatedegreeprogram');
+Route::post('/addnewprogrampost_update/{id}',[\App\Http\Controllers\DegreeProgramController::class, 'addnewprogrampost_update'])->name('addnewprogrampost_update');
+
