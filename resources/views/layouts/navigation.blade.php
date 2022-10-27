@@ -6,7 +6,7 @@
     <!-- Start Header -->
     <header class="header-logo bg-white bb-1 br-1">
         <a class="nav-link text-center mr-lg-3 hidden-xs" id="sidenavToggler"><i class="ti-align-left"></i></a>
-        <a class="gredient-cl navbar-brand" href="{{route('home')}}">Course Management</a>
+        <a class="gredient-cl navbar-brand" href="{{route('home')}}">Degree Program Management</a>
     </header>
     <!-- End Header -->
 
@@ -20,51 +20,58 @@
         <div class="navbar-side">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
-                <!-- Start Dashboard-->
-                <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Dashboard" data-parent="#exampleAccordion">
-                        <i class="ti i-cl-1 ti-dashboard"></i>
-                        <span class="nav-link-text">Dashboard</span>
-                    </a>
-                    <ul class="sidenav-second-level collapse" id="Dashboard">
-                        <li>
-                            <a href="{{route('home')}}">Staff Dashboard</a>
-                        </li>
-
-
-                    </ul>
-                </li>
-                <!-- End Dashboard -->
-
-                <!-- Start Advance Apps -->
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Advance Apps">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#advance-apps" data-parent="#exampleAccordion">
-                        <i class="ti i-cl-9 ti ti-desktop"></i>
-                        <span class="nav-link-text">Add New Course</span>
-                    </a>
-
-                </li>
-                <!-- End Advance Apps -->
 
                 <!-- Start projects -->
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
-                    <a class="nav-link" href="#">
-                        <i class="ti i-cl-2 ti-layers"></i>
-                        <span class="nav-link-text">Course List</span>
+                    <a class="nav-link" href="">
+                        <i class="ti i-cl-2 ti-list"></i>
+                        <span class="nav-link-text">Available Courses</span>
+                    </a>
+                </li>
+                <!-- End Projects -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Report">
+                    <a class="nav-link" href="{{route('addnewprogram')}}">
+                        <i class="ti i-cl-11 ti-plus"></i>
+                        <span class="nav-link-text">Add Course</span>
                     </a>
                 </li>
 
+
+                <!-- Start Report -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Report">
+                    <a class="nav-link" href="#">
+                        <i class="ti i-cl-11 ti-bar-chart"></i>
+                        <span class="nav-link-text">Report</span>
+                    </a>
+                </li>
+                <!-- End Report -->
 
 
             </ul>
         </div>
         <!-- =============== End Side Menu ============== -->
 
+        <!-- =============== Search Bar ============== -->
+        <ul class="navbar-nav ml-left">
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                    <div class="input-group">
+						<span class="input-group-btn">
+							<button class="btn btn-primary" type="button">
+							  <i class="ti-search"></i>
+							</button>
+						</span>
+                        <input class="form-control" type="text" placeholder="Type In TO Search">
+                    </div>
+                </form>
+            </li>
+        </ul>
+        <!-- =============== End Search Bar ============== -->
 
-   <div></div>
+        <!-- =============== Header Rightside Menu ============== -->
         <ul class="navbar-nav ml-auto">
 
-        </ul>
+
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle mr-lg-0 user-img a-topbar__nav a-nav" id="userDropdown" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -93,8 +100,8 @@
                 </ul>
             </li>
         </ul>
-
-    </div></nav>
+        <!-- =============== End Header Rightside Menu ============== -->
+    </div>
 </nav>
 <!-- =====================================================
                     End Navigations
