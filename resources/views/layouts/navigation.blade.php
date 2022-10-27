@@ -37,36 +37,12 @@
                 </li>
 
 
-                <!-- Start Report -->
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Report">
-                    <a class="nav-link" href="#">
-                        <i class="ti i-cl-11 ti-bar-chart"></i>
-                        <span class="nav-link-text">Report</span>
-                    </a>
-                </li>
-                <!-- End Report -->
-
 
             </ul>
         </div>
         <!-- =============== End Side Menu ============== -->
 
-        <!-- =============== Search Bar ============== -->
-        <ul class="navbar-nav ml-left">
-            <li class="nav-item">
-                <form class="form-inline my-2 my-lg-0 mr-lg-2">
-                    <div class="input-group">
-						<span class="input-group-btn">
-							<button class="btn btn-primary" type="button">
-							  <i class="ti-search"></i>
-							</button>
-						</span>
-                        <input class="form-control" type="text" placeholder="Type In TO Search">
-                    </div>
-                </form>
-            </li>
-        </ul>
-        <!-- =============== End Search Bar ============== -->
+
 
         <!-- =============== Header Rightside Menu ============== -->
         <ul class="navbar-nav ml-auto">

@@ -19,6 +19,12 @@ class DegreeProgramController extends Controller
 
          return view('degreeprogramviews/degreeprogramlistview', ['degreeprogramlists'=>$degreeprogramlists]);
     }
+    public function apiindex()
+    {
+        $degreeprogramlists =  DB::table('degree_programs')->latest() ->get();
+        return $degreeprogramlists;
+    }
+
 
     /**
      * Show the form for creating a new resource.
