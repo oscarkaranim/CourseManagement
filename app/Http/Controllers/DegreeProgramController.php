@@ -25,6 +25,13 @@ class DegreeProgramController extends Controller
         return $degreeprogramlists;
     }
 
+    public function apifetchsingledegree(Request $request)
+    {
+
+        $degreeprogramattributes = DegreeProgram::where('id', '=', $request->Input('id'))->first();
+        return $degreeprogramattributes;
+    }
+
 
     /**
      * Show the form for creating a new resource.

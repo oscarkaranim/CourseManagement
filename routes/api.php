@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('listdegree', [\App\Http\Controllers\DegreeProgramController::class, 'apiindex']);
+Route::get('apifetchsingledegree', [\App\Http\Controllers\DegreeProgramController::class, 'apifetchsingledegree']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
