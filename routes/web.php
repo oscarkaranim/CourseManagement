@@ -20,5 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('degreeprogramviews/addnewprogram', [App\Http\Controllers\DegreeProgramController::class, 'create'])->name('addnewprogram');
+Route::get('addnewprogram', [App\Http\Controllers\DegreeProgramController::class, 'create'])->name('addnewprogram');
 Route::post('addnewprogrampost', [\App\Http\Controllers\DegreeProgramController::class,'store'])->name('addnewprogrampost');
+Route::get('degreeprogramindex', [App\Http\Controllers\DegreeProgramController::class, 'index'])->name('degreeprogramindex');

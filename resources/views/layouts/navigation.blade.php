@@ -23,7 +23,7 @@
 
                 <!-- Start projects -->
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{route('degreeprogramindex')}}">
                         <i class="ti i-cl-2 ti-list"></i>
                         <span class="nav-link-text">Available Courses</span>
                     </a>

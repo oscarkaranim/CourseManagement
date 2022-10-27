@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DegreeProgram;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DegreeProgramController extends Controller
 {
@@ -14,7 +15,9 @@ class DegreeProgramController extends Controller
      */
     public function index()
     {
-        //
+        $degreeprogramlists =  DB::table('degree_programs')->latest() ->get();
+
+         return view('degreeprogramviews/degreeprogramlistview', ['degreeprogramlists'=>$degreeprogramlists]);
     }
 
     /**
@@ -38,7 +41,7 @@ class DegreeProgramController extends Controller
         $prog_title_exist = DegreeProgram::where('degree_program_title', '=', $request->Input('degree_program_title'))->first();
         $ucas_code_exist = DegreeProgram::where('ucas_code', '=', $request->Input('ucas_code'))->first();
 
-        if ($prog_title_exist != null and $ucas_code_exist != null) {
+        if ($prog_title_exist != null or $ucas_code_exist != null) {
 
             return back()
                 ->withInput()
@@ -46,6 +49,8 @@ class DegreeProgramController extends Controller
         }
 
         $degreeprogramcreate = DegreeProgram::create($request->all());
+
+        return view('degreeprogramlistview');
     }
 
     /**
