@@ -55,26 +55,14 @@
                     <b class="f-size-17">{{ Auth::user()->name }}</b>
                 </a>
 
-                <ul class="dropdown-menu dropdown-user animated flipInX" aria-labelledby="userDropdown">
-                    <li class="dropdown-header green-bg">
-                        <div class="header-user-pic">
-                            <img src="{{asset('assets/dist/img/user-20.png')}}" alt="user-img" width="36" class="img-circle">
-                        </div>
-                        <div class="header-user-det">
-                            <span class="a-dropdown__header-title">{{ Auth::user()->name }}</span>
-                            <span class="a-dropdown__header-subtitle">Administrator</span>
-                        </div>
-                    </li>
-                    <li><a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile</a></li>
 
-                    <li><a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a></li>
-                    <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-power-off" ></i> Logout</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </li>
-                </ul>
+
+            <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-power-off" ></i> Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </li>
+
         </ul>
         <!-- =============== End Header Rightside Menu ============== -->
     </div>
