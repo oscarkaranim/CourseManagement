@@ -50,8 +50,9 @@ class DegreeProgramController extends Controller
 
         $degreeprogramcreate = DegreeProgram::create($request->all());
 
-        return view('degreeprogramlistview');
-    }
+        return redirect()->route('degreeprogramindex');
+
+        }
 
     /**
      * Display the specified resource.
@@ -94,9 +95,11 @@ class DegreeProgramController extends Controller
      * @param  \App\Models\DegreeProgram  $degreeProgram
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DegreeProgram $degreeProgram)
+    public function destroy(Request $request,$id)
     {
-        //
+        $delete_program = DegreeProgram::where('id',$id)->first();
+        $delete_program->delete();
+        return redirect()->route('degreeprogramindex');
     }
     public function addnewprogrampost_update(Request $request,$id)
     {

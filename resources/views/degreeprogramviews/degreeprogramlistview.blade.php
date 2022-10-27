@@ -38,7 +38,7 @@
                 <td>{{ $degreeprogramlist->degree_program_description}}</td>
                 <td>{{ $degreeprogramlist->keywords}}</td>
                 <td><a class="btn btn-primary" href="{{route('updatedegreeprogram',['id'=>$degreeprogramlist->id])}}">Update</a></td>
-                <td><a class="btn btn-danger" href = 'ajsfileview/{{$degreeprogramlist->id }}'>Delete</a></td>
+                <td><a class="btn btn-danger" href ="{{route('deletedegreeprogram',['id'=>$degreeprogramlist->id])}}">Delete</a></td>
 
             </tr>
             @endforeach

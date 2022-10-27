@@ -25,4 +25,5 @@ Route::post('addnewprogrampost', [\App\Http\Controllers\DegreeProgramController:
 Route::get('degreeprogramindex', [App\Http\Controllers\DegreeProgramController::class, 'index'])->name('degreeprogramindex');
 Route::get('/updatedegreeprogram/{id}',[\App\Http\Controllers\DegreeProgramController::class, 'update'])->name('updatedegreeprogram');
 Route::post('/addnewprogrampost_update/{id}',[\App\Http\Controllers\DegreeProgramController::class, 'addnewprogrampost_update'])->name('addnewprogrampost_update');
+Route::get('/deletedegreeprogram/{id}',[\App\Http\Controllers\DegreeProgramController::class, 'destroy'])->name('deletedegreeprogram');
 
