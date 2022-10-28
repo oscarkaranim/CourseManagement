@@ -17,3 +17,5 @@ Setup Instructions:
 
 
 NB: Relevant images can be found at /"CourseManagement/public/imagesproj" folder within the project
+
+~~~~~~~~
